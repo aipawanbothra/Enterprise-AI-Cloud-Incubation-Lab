@@ -15,7 +15,7 @@ const FootprintSection: React.FC = () => {
   const hubs = Object.values(REGIONAL_HUBS);
 
   return (
-    <section className="bg-[#070B19] py-24 text-slate-900 dark:text-white">
+    <section className="bg-slate-50 dark:bg-[#070B19] py-24 text-slate-900 dark:text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
         
         {/* Hubs */}
@@ -28,7 +28,7 @@ const FootprintSection: React.FC = () => {
           </div>
           <div className="grid md:grid-cols-2 gap-8">
             {hubs.map((hub) => (
-              <div key={hub.name} className="bg-[#0F172A] border border-slate-200 dark:border-gray-800 p-8 rounded-2xl relative overflow-hidden">
+              <div key={hub.name} className="bg-white dark:bg-[#0F172A] border border-slate-200 dark:border-slate-300 dark:border-gray-800 p-8 rounded-2xl relative overflow-hidden">
                 <div className="absolute top-0 right-0 p-4 opacity-10 text-cyan-500">
                   <MapPin className="w-24 h-24" />
                 </div>
@@ -39,7 +39,7 @@ const FootprintSection: React.FC = () => {
                 <div className="space-y-3">
                   <h4 className="text-sm font-semibold text-gray-500 uppercase tracking-wider">Partner Institutions</h4>
                   {hub.colleges.map((college, idx) => (
-                    <div key={idx} className="flex items-center text-gray-300 bg-[#1E293B] px-4 py-2 rounded-lg">
+                    <div key={idx} className="flex items-center text-gray-300 bg-slate-100 dark:bg-[#1E293B] px-4 py-2 rounded-lg">
                       <GraduationCap className="w-4 h-4 mr-3 text-emerald-400 shrink-0" />
                       {college}
                     </div>
@@ -82,7 +82,7 @@ const FootprintSection: React.FC = () => {
           </div>
           <div className="space-y-4">
             {filteredFaqs.map((faq, idx) => (
-              <div key={idx} className="bg-[#0F172A] border border-slate-200 dark:border-gray-800 rounded-xl overflow-hidden">
+              <div key={idx} className="bg-white dark:bg-[#0F172A] border border-slate-200 dark:border-slate-300 dark:border-gray-800 rounded-xl overflow-hidden">
                 <button
                   className="w-full px-6 py-4 flex items-center justify-between focus:outline-none"
                   onClick={() => setOpenFaq(openFaq === idx ? null : idx)}

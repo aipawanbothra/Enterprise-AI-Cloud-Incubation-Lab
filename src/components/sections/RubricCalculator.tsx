@@ -43,7 +43,7 @@ const RubricCalculator: React.FC = () => {
   };
 
   return (
-    <section className="bg-[#0F172A] py-24 text-slate-900 dark:text-white">
+    <section className="bg-white dark:bg-[#0F172A] py-24 text-slate-900 dark:text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -62,7 +62,7 @@ const RubricCalculator: React.FC = () => {
               const value = scores[pillar.id];
 
               return (
-                <div key={pillar.id} className="bg-[#1E293B] rounded-xl p-6 border border-slate-200 dark:border-gray-800">
+                <div key={pillar.id} className="bg-slate-100 dark:bg-[#1E293B] rounded-xl p-6 border border-slate-200 dark:border-slate-300 dark:border-gray-800">
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center space-x-3">
                       <div className="p-2 rounded-lg" style={{ backgroundColor: `${color}20`, color }}>
@@ -97,7 +97,7 @@ const RubricCalculator: React.FC = () => {
           </div>
 
           <div className="lg:col-span-5">
-            <div className="sticky top-24 bg-[#1E293B] rounded-2xl p-8 border border-slate-200 dark:border-gray-800 flex flex-col items-center text-center">
+            <div className="sticky top-24 bg-slate-100 dark:bg-[#1E293B] rounded-2xl p-8 border border-slate-200 dark:border-slate-300 dark:border-gray-800 flex flex-col items-center text-center">
               <h3 className="text-xl font-medium text-gray-300 mb-2">Overall Score</h3>
               <div className="text-6xl font-bold mb-8">
                 {totalScore}%

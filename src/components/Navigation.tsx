@@ -44,7 +44,7 @@ export default function Navigation({ className = '' }: NavigationProps) {
 
   return (
     <header
-      className={`sticky top-0 z-50 w-full backdrop-blur-md bg-[#070B19]/80 border-b border-slate-800/80 transition-colors ${className}`}
+      className={`sticky top-0 z-50 w-full backdrop-blur-md bg-white/80 dark:bg-[#070B19]/80 border-b border-slate-200 dark:border-slate-800/80 transition-colors ${className}`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
         {/* Left side: Brand Icon + Title */}
@@ -61,10 +61,10 @@ export default function Navigation({ className = '' }: NavigationProps) {
           }}
           aria-label="Enterprise AI & Cloud Incubation Lab - scroll to top"
         >
-          <div className="flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9 rounded-lg bg-[#38BDF8]/10 border border-[#38BDF8]/20 shadow-[0_0_12px_rgba(56,189,248,0.2)] group-hover:border-[#38BDF8]/40 transition-colors">
-            <Rocket className="w-4 h-4 sm:w-5 sm:h-5 text-[#38BDF8] transition-transform group-hover:scale-110" />
+          <div className="flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9 rounded-lg bg-cyan-600/10 dark:bg-[#38BDF8]/10 border border-cyan-600/20 dark:border-[#38BDF8]/20 shadow-sm dark:shadow-[0_0_12px_rgba(56,189,248,0.2)] group-hover:border-cyan-600/40 dark:group-hover:border-[#38BDF8]/40 transition-colors">
+            <Rocket className="w-4 h-4 sm:w-5 sm:h-5 text-cyan-600 dark:text-[#38BDF8] transition-transform group-hover:scale-110" />
           </div>
-          <span className="font-bold text-white text-sm sm:text-base tracking-tight hidden sm:inline whitespace-nowrap">
+          <span className="font-bold text-slate-900 dark:text-white text-sm sm:text-base tracking-tight hidden sm:inline whitespace-nowrap">
             Enterprise AI &amp; Cloud Incubation Lab
           </span>
         </div>
@@ -72,7 +72,7 @@ export default function Navigation({ className = '' }: NavigationProps) {
         {/* Center: Persona toggle switcher with two pill buttons */}
         <div className="flex items-center justify-center flex-shrink-0">
           <div
-            className="flex items-center p-1 rounded-full bg-[#0F172A] border border-slate-800 shadow-inner"
+            className="flex items-center p-1 rounded-full bg-slate-100 dark:bg-[#0F172A] border border-slate-300 dark:border-slate-800 shadow-inner"
             role="tablist"
             aria-label="Target persona selector"
           >
@@ -87,8 +87,8 @@ export default function Navigation({ className = '' }: NavigationProps) {
                   onClick={() => setPersona(option.id)}
                   className={`relative px-3.5 sm:px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold transition-colors duration-200 z-10 flex items-center gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400/50 ${
                     isActive
-                      ? 'text-[#070B19]'
-                      : 'text-slate-400 hover:text-slate-200'
+                      ? 'text-white dark:text-[#070B19]'
+                      : 'text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-200'
                   }`}
                 >
                   {isActive && (

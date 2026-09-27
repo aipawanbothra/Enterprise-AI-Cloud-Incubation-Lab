@@ -15,7 +15,7 @@ export default function RoadmapSection() {
   const currentMonthData = ROADMAP[activeMonth];
 
   return (
-    <section className="py-20 bg-[#0F172A] relative overflow-hidden" id="roadmap">
+    <section className="py-20 bg-white dark:bg-[#0F172A] relative overflow-hidden" id="roadmap">
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="mb-12 text-center md:text-left">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">6-Month Engineering Incubation Roadmap</h2>
@@ -26,7 +26,7 @@ export default function RoadmapSection() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* 3D Canvas Container */}
-          <div className="h-[500px] w-full bg-slate-100 dark:bg-slate-800/30 rounded-2xl border border-slate-300 dark:border-slate-700/50 relative">
+          <div className="h-[500px] w-full bg-slate-100 dark:bg-slate-200/30 dark:bg-slate-800/30 rounded-2xl border border-slate-300 dark:border-slate-300 dark:border-slate-700/50 relative">
             <Suspense fallback={<div className="flex items-center justify-center h-full text-slate-600 dark:text-slate-400">Loading 3D Visualizer...</div>}>
               <Canvas camera={{ position: [0, 3, 8], fov: 50 }} style={{ background: 'transparent' }}>
                 <ambientLight intensity={0.5} />
@@ -39,7 +39,7 @@ export default function RoadmapSection() {
 
           {/* Details Panel */}
           <div className="flex flex-col h-[500px] justify-between">
-            <div className="bg-slate-100 dark:bg-slate-800/50 rounded-2xl border border-slate-300 dark:border-slate-700/50 p-6 md:p-8 flex-grow">
+            <div className="bg-slate-100 dark:bg-slate-200/50 dark:bg-slate-800/50 rounded-2xl border border-slate-300 dark:border-slate-300 dark:border-slate-700/50 p-6 md:p-8 flex-grow">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={activeMonth}
@@ -68,7 +68,7 @@ export default function RoadmapSection() {
                     </h4>
                     <div className="flex flex-wrap gap-2">
                       {currentMonthData?.tech?.map((tech: string, i: number) => (
-                        <span key={i} className="px-3 py-1 rounded-full bg-slate-200 dark:bg-slate-700/50 text-slate-200 text-sm border border-slate-600/50">
+                        <span key={i} className="px-3 py-1 rounded-full bg-slate-200 dark:bg-slate-300/50 dark:bg-slate-700/50 text-slate-200 text-sm border border-slate-600/50">
                           {tech}
                         </span>
                       ))}
@@ -79,7 +79,7 @@ export default function RoadmapSection() {
                     <h4 className="text-sm font-semibold text-slate-600 dark:text-slate-400 uppercase tracking-wider mb-3 flex items-center gap-2">
                       <CheckCircle2 size={16} /> Deliverable
                     </h4>
-                    <div className="bg-slate-100 dark:bg-slate-900/50 rounded-xl p-4 border border-slate-300 dark:border-slate-700/50">
+                    <div className="bg-slate-100 dark:bg-slate-200/50 dark:bg-slate-900/50 rounded-xl p-4 border border-slate-300 dark:border-slate-300 dark:border-slate-700/50">
                       <p className="text-emerald-400 font-medium">{currentMonthData?.deliverable || "Monthly Project"}</p>
                     </div>
                   </div>
@@ -96,7 +96,7 @@ export default function RoadmapSection() {
                   className={`py-3 rounded-xl transition-all duration-200 border text-center font-medium
                     ${activeMonth === month 
                       ? 'bg-cyan-500/20 border-cyan-500/50 text-cyan-400' 
-                      : 'bg-slate-100 dark:bg-slate-800/30 border-slate-700/30 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:bg-slate-700/50 hover:border-slate-600/50'}`}
+                      : 'bg-slate-100 dark:bg-slate-200/30 dark:bg-slate-800/30 border-slate-700/30 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:bg-slate-300/50 dark:bg-slate-700/50 hover:border-slate-600/50'}`}
                 >
                   M{month + 1}
                 </button>

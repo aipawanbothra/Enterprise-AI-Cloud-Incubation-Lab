@@ -10,7 +10,7 @@ const HardwareSection: React.FC = () => {
   const [hoveredIdx, setHoveredIdx] = useState<number | null>(null);
 
   return (
-    <section className="bg-[#0F172A] py-24 text-slate-900 dark:text-white">
+    <section className="bg-white dark:bg-[#0F172A] py-24 text-slate-900 dark:text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Hardware Lab Kit & Enterprise Stack</h2>
@@ -45,7 +45,7 @@ const HardwareSection: React.FC = () => {
             return (
               <div 
                 key={idx}
-                className="relative bg-[#1E293B] border border-slate-200 dark:border-gray-800 rounded-2xl p-6 transition-all duration-300"
+                className="relative bg-slate-100 dark:bg-[#1E293B] border border-slate-200 dark:border-slate-300 dark:border-gray-800 rounded-2xl p-6 transition-all duration-300"
                 onMouseEnter={() => setHoveredIdx(idx)}
                 onMouseLeave={() => setHoveredIdx(null)}
                 style={{
@@ -80,7 +80,7 @@ const HardwareSection: React.FC = () => {
         
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {ENTERPRISE_STACK.map((tool, idx) => (
-            <div key={idx} className="bg-[#1E293B] border border-slate-200 dark:border-gray-800 rounded-xl p-4 flex items-center justify-center hover:bg-gray-800 transition-colors cursor-pointer">
+            <div key={idx} className="bg-slate-100 dark:bg-[#1E293B] border border-slate-200 dark:border-slate-300 dark:border-gray-800 rounded-xl p-4 flex items-center justify-center hover:bg-gray-800 transition-colors cursor-pointer">
               <span className="font-medium text-gray-300">{tool}</span>
             </div>
           ))}

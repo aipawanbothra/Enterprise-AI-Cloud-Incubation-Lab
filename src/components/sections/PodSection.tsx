@@ -12,7 +12,7 @@ export default function PodSection() {
   const currentRole = POD_ROLES[activeRole];
 
   return (
-    <section className="py-20 bg-[#070B19] relative overflow-hidden" id="pod-architecture">
+    <section className="py-20 bg-slate-50 dark:bg-[#070B19] relative overflow-hidden" id="pod-architecture">
       <div className="max-w-7xl mx-auto px-4 md:px-6 relative z-10">
         <div className="mb-12 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">Autonomous Agile Pod Architecture</h2>
@@ -23,7 +23,7 @@ export default function PodSection() {
 
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-start">
           {/* 3D Canvas */}
-          <div className="lg:col-span-3 h-[500px] w-full bg-slate-100 dark:bg-slate-900/50 rounded-2xl border border-slate-200 dark:border-slate-800 relative">
+          <div className="lg:col-span-3 h-[500px] w-full bg-slate-100 dark:bg-slate-200/50 dark:bg-slate-900/50 rounded-2xl border border-slate-200 dark:border-slate-300 dark:border-slate-800 relative">
             <Suspense fallback={<div className="flex items-center justify-center h-full text-slate-500">Loading Pod Environment...</div>}>
               <Canvas camera={{ position: [0, 4, 10], fov: 45 }} style={{ background: 'transparent' }}>
                 <ambientLight intensity={0.6} />
@@ -48,7 +48,7 @@ export default function PodSection() {
           {/* Details Panels */}
           <div className="lg:col-span-2 flex flex-col gap-6 h-full">
             {/* Role Card */}
-            <div className="bg-slate-100 dark:bg-slate-800/40 rounded-2xl border border-slate-300 dark:border-slate-700/50 p-6 flex-grow">
+            <div className="bg-slate-100 dark:bg-slate-200/50 dark:bg-slate-800/40 rounded-2xl border border-slate-300 dark:border-slate-300 dark:border-slate-700/50 p-6 flex-grow">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={activeRole}
@@ -62,7 +62,7 @@ export default function PodSection() {
                       <Users className="text-violet-400 w-5 h-5 shrink-0" />
                       {currentRole.role}
                     </h3>
-                    <span className="bg-slate-200 dark:bg-slate-700/50 text-slate-700 dark:text-slate-300 px-3 py-1 rounded-lg text-sm font-medium border border-slate-600/50 shrink-0">
+                    <span className="bg-slate-200 dark:bg-slate-300/50 dark:bg-slate-700/50 text-slate-700 dark:text-slate-300 px-3 py-1 rounded-lg text-sm font-medium border border-slate-600/50 shrink-0">
                       ×{currentRole.count}
                     </span>
                   </div>
@@ -84,14 +84,14 @@ export default function PodSection() {
             </div>
 
             {/* Weekly Rhythm */}
-            <div className="bg-slate-100 dark:bg-slate-800/40 rounded-2xl border border-slate-300 dark:border-slate-700/50 p-6">
+            <div className="bg-slate-100 dark:bg-slate-200/50 dark:bg-slate-800/40 rounded-2xl border border-slate-300 dark:border-slate-300 dark:border-slate-700/50 p-6">
               <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-4 flex items-center gap-2">
                 <CalendarIcon className="text-emerald-400 w-5 h-5" />
                 Weekly Rhythm
               </h3>
               <div className="space-y-2">
                 {WEEKLY_RHYTHM.map((day, i) => (
-                  <div key={i} className="flex items-start gap-3 p-2.5 rounded-xl bg-slate-100 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 hover:border-slate-600 transition-colors">
+                  <div key={i} className="flex items-start gap-3 p-2.5 rounded-xl bg-slate-100 dark:bg-slate-200/50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-300 dark:border-slate-800 hover:border-slate-600 transition-colors">
                     <div className="w-16 shrink-0 text-xs font-bold text-slate-600 dark:text-slate-400 mt-0.5">
                       {day.day}
                     </div>

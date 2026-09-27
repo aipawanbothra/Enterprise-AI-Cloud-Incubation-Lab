@@ -34,7 +34,7 @@ const GapSection: React.FC = () => {
   };
 
   return (
-    <section className="w-full bg-[#070B19] py-24 px-4 sm:px-6 lg:px-8">
+    <section className="w-full bg-slate-50 dark:bg-[#070B19] py-24 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto flex flex-col items-center">
         {/* Header */}
         <div className="text-center mb-16">
@@ -81,7 +81,7 @@ const GapSection: React.FC = () => {
           {/* Divider */}
           <div className="hidden lg:flex flex-col items-center justify-center">
             <div className="w-px h-full bg-gradient-to-b from-transparent via-slate-700 to-transparent relative">
-              <div className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-10 h-10 bg-[#070B19] border border-slate-700 rounded-full flex items-center justify-center z-10 text-slate-600 dark:text-slate-400 text-sm font-bold shadow-xl">
+              <div className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-10 h-10 bg-slate-50 dark:bg-[#070B19] border border-slate-700 rounded-full flex items-center justify-center z-10 text-slate-600 dark:text-slate-400 text-sm font-bold shadow-xl">
                 VS
               </div>
             </div>
@@ -117,7 +117,7 @@ const GapSection: React.FC = () => {
         </div>
 
         {/* Interactive Slider */}
-        <div className="w-full max-w-md mx-auto mt-16 p-6 bg-slate-100 dark:bg-slate-900/50 rounded-xl border border-slate-200 dark:border-slate-800">
+        <div className="w-full max-w-md mx-auto mt-16 p-6 bg-slate-100 dark:bg-slate-200/50 dark:bg-slate-900/50 rounded-xl border border-slate-200 dark:border-slate-300 dark:border-slate-800">
           <label className="block text-center text-sm text-slate-600 dark:text-slate-400 mb-4 font-medium uppercase tracking-wider">
             Shift Your Perspective
           </label>

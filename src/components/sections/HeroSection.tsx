@@ -10,8 +10,8 @@ const HeroSection: React.FC = () => {
   const isStudent = persona === 'student';
 
   const badgeColor = isStudent
-    ? 'border-cyan-400/20 bg-cyan-400/10 text-cyan-300'
-    : 'border-emerald-400/20 bg-emerald-400/10 text-emerald-300';
+    ? 'border-cyan-600/20 dark:border-cyan-400/20 bg-cyan-600/10 dark:bg-cyan-400/10 text-cyan-700 dark:text-cyan-300'
+    : 'border-emerald-600/20 dark:border-emerald-400/20 bg-emerald-600/10 dark:bg-emerald-400/10 text-emerald-700 dark:text-emerald-300';
 
   const subHeadline = isStudent
     ? 'Master Docker, FastAPI, RAG Agents, ROS2 Robotics & deliver real paid SMB projects.'
@@ -93,7 +93,7 @@ const HeroSection: React.FC = () => {
                 {icons[metric.icon] || <Zap className="w-5 h-5" />}
               </div>
               <div className="text-2xl font-bold text-slate-900 dark:text-white mb-1">{metric.value}</div>
-              <div className="text-xs text-slate-500 dark:text-slate-400 text-center uppercase tracking-wider font-semibold">
+              <div className="text-xs text-slate-500 dark:text-slate-600 dark:text-slate-400 text-center uppercase tracking-wider font-semibold">
                 {metric.label}
               </div>
             </motion.div>
@@ -107,19 +107,19 @@ const HeroSection: React.FC = () => {
         >
           {isStudent ? (
             <>
-              <button className="px-8 py-4 rounded-lg font-bold text-white dark:text-slate-900 bg-cyan-600 dark:bg-cyan-400 hover:bg-cyan-700 dark:hover:bg-cyan-300 transition-colors shadow-lg dark:shadow-[0_0_20px_rgba(56,189,248,0.4)]">
+              <button className="px-8 py-4 rounded-lg font-bold text-slate-900 dark:text-white dark:text-slate-900 bg-cyan-600 dark:bg-cyan-400 hover:bg-cyan-700 dark:hover:bg-cyan-300 transition-colors shadow-lg dark:shadow-[0_0_20px_rgba(56,189,248,0.4)]">
                 Apply for Diagnostic Screening
               </button>
-              <button className="px-8 py-4 rounded-lg font-bold text-slate-700 dark:text-white border border-slate-300 dark:border-slate-600 hover:bg-slate-100 dark:hover:bg-white/5 transition-colors">
+              <button className="px-8 py-4 rounded-lg font-bold text-slate-700 dark:text-slate-900 dark:text-white border border-slate-300 dark:border-slate-600 hover:bg-slate-100 dark:hover:bg-white/5 transition-colors">
                 Explore Roadmap
               </button>
             </>
           ) : (
             <>
-              <button className="px-8 py-4 rounded-lg font-bold text-white dark:text-slate-900 bg-emerald-600 dark:bg-emerald-400 hover:bg-emerald-700 dark:hover:bg-emerald-300 transition-colors shadow-lg dark:shadow-[0_0_20px_rgba(16,185,129,0.4)]">
+              <button className="px-8 py-4 rounded-lg font-bold text-slate-900 dark:text-white dark:text-slate-900 bg-emerald-600 dark:bg-emerald-400 hover:bg-emerald-700 dark:hover:bg-emerald-300 transition-colors shadow-lg dark:shadow-[0_0_20px_rgba(16,185,129,0.4)]">
                 Request Academic MoU Briefing
               </button>
-              <button className="px-8 py-4 rounded-lg font-bold text-slate-700 dark:text-white border border-slate-300 dark:border-slate-600 hover:bg-slate-100 dark:hover:bg-white/5 transition-colors">
+              <button className="px-8 py-4 rounded-lg font-bold text-slate-700 dark:text-slate-900 dark:text-white border border-slate-300 dark:border-slate-600 hover:bg-slate-100 dark:hover:bg-white/5 transition-colors">
                 View Evaluation Rubric
               </button>
             </>
